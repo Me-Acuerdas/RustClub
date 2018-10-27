@@ -13,30 +13,18 @@ fn primes(data: u64) -> Vec<u64>{
 
 
 fn fibo(data: u64) -> u64{
-    // let count = Fibo{
-    //     current_value : 0,
-    //     previous_value : 0,
-    //     next_value: 0,
-    //     first_value: 0,
-    //     second_value: 1,
-    // };//End Let
-    // for reps in (0..data){
-    //     if reps < 0 {
-    //
-    //     }//End If
-    // }//End For loop
-    // count.current_value
-
-    if data == 0{
+    let mut yeet: (u64,u64) = (0,1);
+    if data == 0 {
         0
     }
-    else if data == 1 {
-        1
-    }
-    else {
-        fibo (data - 1) +fibo(data - 2)
-    }
-}
+    else{
+        for reps in 1..data{
+            yeet = (yeet.1,yeet.0+yeet.1);
+            println!("{:?}",yeet.1 )
+        }//End For loop
+        yeet.1
+    }//End else
+}//End fibo
 fn gcd (data: u64, data2: u64) -> u64{
     0
 }
